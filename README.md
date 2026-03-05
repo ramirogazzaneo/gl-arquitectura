@@ -3,6 +3,7 @@
 
 
 ![Preview del sistema](docs/images/admin/dashboard-mainsite.png)
+![Preview del sistema](docs/images/admin/dashboard-mainsite2.png)
 
 
 
