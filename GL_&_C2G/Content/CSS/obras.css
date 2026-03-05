@@ -1,0 +1,127 @@
+﻿body {
+    background: linear-gradient(180deg,#f6f7fb 0%, #eef1f7 40%, #ebeff6 100%);
+    color: #e6e9ef;
+    margin: 0;
+    max-height: max-content !important;
+    padding-top: 37px !important; 
+    padding-left: 260px !important; 
+}
+
+
+.profile-wrapper {
+    justify-content: center !important;
+    padding-top: 4rem;
+}
+
+
+.profile-card {
+    max-width: 1000px; 
+    padding: 2.25rem;
+    margin-top: 70px;
+    margin-left: 290px;
+    background: #ffffff;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    text-align: left;
+}
+
+ 
+    .profile-card .profile-title {
+        margin: 0 0 3rem 0;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0c0f14;
+    }
+
+    
+    .profile-card .form-group {
+        color: #0c0f14;
+        margin-bottom: 1.1rem;
+        margin-left: 100px;
+    }
+
+        .profile-card .form-group label {
+            color: #0c0f14;
+            margin-bottom: .45rem;
+        }
+
+       
+        .profile-card .form-group .form-control {
+            background: rgba(255,255,255,.06);
+            border: 1.5px solid #2e2e2e;
+            color: #9f9f9f !important;
+            height: 50px;
+            border-radius: 12px;
+            padding: .5rem .9rem;
+            transition: border-color .14s ease, box-shadow .14s ease, background .14s ease;
+        }
+
+            .profile-card .form-group .form-control:focus {
+                background: rgba(255,255,255,.08);
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.18);
+                outline: none;
+            }
+
+    .profile-card ::placeholder {
+        color: rgba(230,233,239,.75);
+    }
+
+ 
+    .profile-card .helper-text {
+        color: #0c0f14;
+    }
+
+        .profile-card .helper-text a {
+            color: #60a5fa;
+        }
+
+            .profile-card .helper-text a:hover {
+                text-decoration: underline;
+            }
+
+   
+    .profile-card .button-group {
+        display: flex;
+        flex-direction: column;
+        margin-left: 320px;
+        margin-top: 2rem;
+    }
+
+        .profile-card .button-group .btn {
+            border-radius: 12px;
+            height: 44px;
+            font-weight: 600;
+            transition: transform .14s ease, filter .14s ease, background .14s ease;
+        }
+
+            .profile-card .button-group .btn:active {
+                transform: translateY(1px);
+            }
+
+
+.btn-guardar {
+    background: #e6e9ef;
+    border-color: #0c0f14;
+    color: #0c0f14;
+}
+
+    .btn-guardar:hover {
+        background: #1aaa51;
+        color: #fff;
+    }
+
+
+.btn-inicio {
+    background: #e6e9ef;
+    border-color: #0c0f14;
+    color: #0c0f14;
+}
+
+    .btn-inicio:hover {
+        background: #0c0f14;
+        color: #FFF;
+    }

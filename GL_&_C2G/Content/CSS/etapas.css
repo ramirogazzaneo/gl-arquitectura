@@ -1,0 +1,140 @@
+﻿
+body {
+    background: url('/Content/imagenes/foto1.jpg') center/cover fixed no-repeat;
+    margin: 0;
+    padding-top: 100px; 
+    max-height: max-content !important;
+    padding-left: 260px !important;
+}
+
+
+.page-etapas {
+    width: min(1400px,96vw);
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+    box-sizing: border-box;
+}
+
+
+    .page-etapas .card {
+        background: rgba(255,255,255,.97);
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(0,0,0,.12);
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+        .page-etapas .card > .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .8rem 1rem;
+            background: #fff;
+            border-bottom: 1px solid #e9ecef;
+            font-weight: 600;
+        }
+
+        .page-etapas .card > .card-body {
+            padding: 1rem;
+        }
+
+ 
+    .page-etapas > .card:first-of-type > .card-header {
+        position: sticky;
+        top: 56px; 
+        z-index: 50;
+    }
+
+
+    .page-etapas .row.g-2.align-items-end label {
+        font-weight: 600;
+        margin-bottom: .25rem;
+    }
+
+.inline-form {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+    .inline-form .form-control {
+        max-width: 260px;
+    }
+
+
+.pill {
+    display: inline-block;
+    background: #f3f4f6;
+    border-radius: 999px;
+    font-size: .8rem;
+    padding: .15rem .6rem;
+}
+
+.actions > * {
+    margin-left: .35rem;
+}
+
+
+.page-etapas .table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+    .page-etapas .table th,
+    .page-etapas .table td {
+        padding: .7rem .9rem;
+        vertical-align: middle;
+        border: none;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        max-width: 1px;
+    }
+
+    .page-etapas .table tbody tr:hover {
+        background: #f6f7f9;
+    }
+
+
+.page-etapas .card .table thead th {
+    position: sticky;
+    top: calc(56px + 56px);
+    z-index: 40;
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+
+.page-etapas .table th:last-child,
+.page-etapas .table td:last-child {
+    width: 16rem;
+    min-width: 16rem;
+    white-space: nowrap;
+    text-align: right;
+    padding-right: .5rem;
+}
+
+
+.grid-sm .btn {
+    padding: .38rem .7rem;
+    font-size: .92rem;
+    border-radius: .45rem;
+}
+
+.sep {
+    height: .75rem;
+}
+
+.btn.disabled, .btn:disabled {
+    opacity: .55;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+
+

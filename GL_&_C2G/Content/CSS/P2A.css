@@ -1,0 +1,370 @@
+﻿html, body {
+    height: 100%;
+    background: #0c0f14;
+    background: linear-gradient(160deg,#0c0f14,#111827 60%);
+    color: #e6e9ef;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    max-height: max-content !important;
+    padding-top: 37px !important; 
+    padding-left: 255px !important; 
+}
+
+
+.canvas-light {
+    position: relative;
+    min-height: calc(100vh - 37px);
+    width: 100%;
+    background: linear-gradient(180deg,#f6f7fb 0%, #eef1f7 40%, #ebeff6 100%);
+    padding: 50px 30px 30px;
+    border-radius: 0;
+    box-shadow: 0 22px 60px rgba(10,12,16,.25) inset, 0 1px 0 rgba(255,255,255,.7) inset;
+}
+
+    .canvas-light .page-etapas {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+   
+    .canvas-light .page-title {
+        margin: 10px 0 1.25rem 0;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: .3px;
+        color: #0f172a;
+        text-shadow: 0 1px 0 rgba(255,255,255,.55);
+    }
+
+    
+    .canvas-light .card {
+        background: #ffffff;
+        border: 1px solid #e6e9ef;
+        border-radius: 14px;
+        box-shadow: 0 6px 22px rgba(15,23,42,.08);
+        margin-left: 0 !important;
+    }
+
+        .canvas-light .card + .card {
+            margin-top: 16px !important;
+        }
+
+    .canvas-light .card-header {
+        background: linear-gradient(180deg,#f9fafb,#f3f4f6);
+        border-bottom: 1px solid #e6e9ef;
+        color: #0f172a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 16px;
+    }
+
+    .canvas-light .card-body {
+        padding: 15px 16px 16px;
+    }
+
+    
+    .canvas-light .form-label,
+    .canvas-light .text-muted,
+    .canvas-light .pill {
+        color: #475569 !important;
+        font-size: .92rem;
+    }
+
+    .canvas-light .pill {
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
+
+    }
+
+
+    .canvas-light .form-select,
+    .canvas-light .form-control {
+        color: #0f172a;
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        padding: .5rem .9rem;
+        transition: border-color 140ms ease, box-shadow 140ms ease;
+        box-shadow: 0 1px 0 rgba(255,255,255,.85) inset;
+    }
+
+        .canvas-light .form-select:focus,
+        .canvas-light .form-control:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+            outline: none;
+        }
+
+    .canvas-light ::placeholder {
+        color: #94a3b8;
+    }
+
+.inline-form {
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    .inline-form .form-control {
+        min-width: 180px;
+    }
+
+        .inline-form .form-control[style*="220px"] {
+            min-width: 220px;
+        }
+
+.actions {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    .actions .form-control {
+        min-width: 200px;
+    }
+
+.sep {
+    height: 1px;
+    background: #e6e9ef;
+    margin: 10px 0 14px;
+}
+
+
+.canvas-light .table {
+    margin: 0;
+    color: #0f172a;
+    border-color: #e6e9ef;
+    --bs-table-bg: transparent;
+    --bs-table-striped-bg: #f8fafc;
+    --bs-table-hover-bg: #eef2f7;
+}
+
+    .canvas-light .table thead th,
+    .canvas-light .table > :not(caption) > * > th {
+        color: #0f172a;
+        font-weight: 600;
+        border-bottom-color: #cbd5e1;
+    }
+
+    .canvas-light .table > :not(caption) > * > td {
+        border-bottom-color: #e6e9ef;
+    }
+
+.grid-sm.table > :not(caption) > * > th,
+.grid-sm.table > :not(caption) > * > td {
+    padding: .55rem 3rem;
+    color: #0f172a;
+}
+
+.table .form-control {
+    padding: .3rem;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.col-money {
+    text-align: right !important;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.page-etapas .btn {
+    border-radius: 7px;
+    transition: transform 140ms ease, filter 140ms ease;
+}
+
+    .page-etapas .btn:active {
+        transform: translateY(1px);
+    }
+
+.canvas-light .btn-primary {
+    background: #008af2 !important;
+    border-color: rgba(255,255,255,.85) !important;
+    color: #e6e9ef !important;
+}
+
+.canvas-light .btn-outline-secondary {
+    color: #334155 !important;
+    border-color: #94a3b8 !important;
+}
+
+    .canvas-light .btn-outline-secondary:hover {
+        background: #4e4e4e;
+        color: #f9fafb !important;
+        border-color: #4e4e4e !important;
+    }
+
+.canvas-light .btn-outline-danger {
+    color: #b91c1c;
+    border-color: #dc2626;
+}
+
+    .canvas-light .btn-outline-danger:hover {
+        background: #620000;
+        color:#f1f5f9 ;
+        border-color:#f3f4f6 ;
+    }
+
+.page-etapas .btn-success {
+    background: #22c55e;
+    border-color: #16a34a;
+}
+
+.page-etapas .btn-danger {
+    background: #ef4444;
+    border-color: #dc2626;
+}
+
+
+.form-select:focus-visible,
+.form-control:focus-visible,
+.btn:focus-visible {
+    outline: 2px dashed rgba(96,165,250,.7);
+    outline-offset: 2px;
+}
+
+
+.canvas-light .rubro-toggle {
+    color: #0f172a;
+    background: #fff;
+    border: 0;
+}
+
+    .canvas-light .rubro-toggle .pill {
+        background: #f1f5f9;
+        border-color: #e2e8f0;
+    }
+
+.rubro-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .9rem 1rem;
+    cursor: pointer;
+}
+
+    .rubro-toggle .chevron {
+        width: .9rem;
+        height: .9rem;
+        display: inline-block;
+        transition: transform .18s ease;
+        mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 5.5l6.5 6 6.5-6'/%3E%3C/svg%3E") no-repeat center/contain;
+        background-color: currentColor;
+        opacity: .85;
+    }
+
+    .rubro-toggle[aria-expanded="true"] .chevron {
+        transform: rotate(180deg);
+    }
+
+.sheet-card {
+    background: #ffffff;
+    border: 1px solid #e6e9ef;
+    padding: 32px 28px;
+    box-shadow: 0 24px 60px rgba(12,15,20,.25), 0 1px 0 rgba(255,255,255,.90) inset;
+    position: relative;
+    margin-top:30px ;
+}
+
+    .sheet-card .page-title {
+        margin: 0 0 20px 0;
+        color: #0f172a;
+        font-weight: 800;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+
+
+    .sheet-card .card {
+        background: #ffffff;
+        border: 1px solid #e7ecf5;
+        border-radius: 14px;
+        box-shadow: none; 
+        margin-left: 0 !important;
+    }
+
+    .sheet-card .card-header {
+        background: linear-gradient(180deg,#f9fafb,#f3f4f6);
+        border-bottom: 1px solid #e8edf5;
+        color: #0f172a;
+    }
+
+
+    .sheet-card .table {
+        color: #0f172a;
+        border-color: #e6e9ef;
+        --bs-table-bg: transparent;
+        --bs-table-striped-bg: #f8fafc;
+        --bs-table-hover-bg: #eef2f7;
+    }
+
+        .sheet-card .table thead th,
+        .sheet-card .table > :not(caption) > * > th {
+            color: #0f172a;
+            border-bottom-color: #cbd5e1;
+        }
+
+        .sheet-card .table > :not(caption) > * > td {
+            border-bottom-color: #e6e9ef;
+        }
+
+
+    .sheet-card .form-control,
+    .sheet-card .form-select {
+        background: #fff;
+        color: #0f172a;
+        border: 1px solid #cbd5e1;
+        box-shadow: 0 1px 0 rgba(255,255,255,.85) inset;
+    }
+
+    .sheet-card .btn-primary {
+        background: linear-gradient(180deg,#2563eb,#1d4ed8);
+        border-color: #1e3a8a;
+        color: #fff;
+    }
+
+
+
+.grid-sm td, .grid-sm th {
+    vertical-align: middle !important;
+    padding: .5rem .75rem !important;
+}
+
+.grid-sm .form-control,
+.grid-sm .btn {
+    padding: .25rem .5rem; 
+    height: 32px; 
+    line-height: 1.2;
+}
+
+.grid-sm .badge {
+    font-size: .75rem;
+    padding: .35em .5em;
+}
+
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+#MainContent_gvPagos_txtDesc {
+    max-width: 240px;
+}
+
+#MainContent_gvPagos_txtMontoEdit {
+    max-width: 120px;
+    text-align: right;
+}
+
+
+.grid-sm {
+    font-size: .95rem;
+}

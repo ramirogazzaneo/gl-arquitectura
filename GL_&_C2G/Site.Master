@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GL___C2G.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+    <!-- 1) Bootstrap CSS -->
+   <link rel="stylesheet" href="<%= ResolveUrl("~/Scripts/WebForms/bootstrap.min.css") %>" />
+
+    <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
+
+    <!-- 2) CSS global -->
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" />
+
+    <!-- 3) CSS específico del dropdown -->
+    <link href="<%= ResolveUrl("~/Content/CSS/site-dropdown.css") %>" rel="stylesheet" />
+
+    <!-- 4) Espacio para CSS extra en cada página -->
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <!--ACA ES EL INICIO DE MI NAVBAR -->
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+                <!-- Logo -->
+                <asp:HyperLink ID="hlHome" runat="server" CssClass="navbar-brand">
+                    <img src="<%= ResolveUrl("~/Content/imagenes/logo.png") %>" height="40" alt="Logo" />
+                    GL ARQUITECTURA.
+                </asp:HyperLink>
+
+                <!-- DESPLEGABLE -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <!-- Dropdown usuario -->
+                        <li id="liUserMenu" runat="server" class="nav-item dropdown">
+                            <a id="aUserToggle" runat="server"
+                                class="nav-link dropdown-toggle d-flex align-items-center"
+                                href="#" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle me-1"></i>
+                                <asp:Literal ID="ltUserName" runat="server" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end bg-dark text-white" aria-labelledby="aUserToggle">
+                                <li id="liPerfil" runat="server">
+                                    <asp:LinkButton ID="lbtnProfile" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnProfile_Click">Perfil</asp:LinkButton>
+                                </li>
+
+                                <li id="LiUser" runat="server">
+                                    <asp:LinkButton ID="LbtnUser" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnUsers_Click">Usuarios</asp:LinkButton>
+                                </li>
+                                <li id="liObras" runat="server">
+                                    <asp:LinkButton ID="lbtnObras" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnObras_Click">Mis Obras</asp:LinkButton>
+                                </li>
+                                <li id="liPresupuestos" runat="server">
+                                    <asp:LinkButton ID="lbtnPresupuestos" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnPresupuestos_Click">Presupuestos</asp:LinkButton>
+                                </li>
+                                <li id="liMateriales" runat="server">
+                                    <asp:LinkButton ID="lbtnMateriales" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnMateriales_Click">Materiales</asp:LinkButton>
+                                </li>
+                                <li id="LiPagos" runat="server">
+                                    <asp:LinkButton ID="lbtnPagos" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnPagos_Click">Pagos</asp:LinkButton>
+                                </li>
+                                <li id="LiTareas" runat="server">
+                                    <asp:LinkButton ID="lbtnTareas" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnTareas_Click">Tareas y Etapas</asp:LinkButton>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary" />
+                                </li>
+                                <li id="liLogout" runat="server">
+                                    <asp:LinkButton ID="lbtnLogout" runat="server" CssClass="dropdown-item text-white"
+                                        OnClick="lbtnLogout_Click">Cerrar sesión</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--ACA EMPIEZA MI MENU DE COSTADO, O SIDE BAR-->
+        <aside id="appSidebar" runat="server" class="app-sidebar bg-dark">
+            <div class="sidebar-inner">
+                <div class="sidebar-title"></div>
+                <ul class="sidebar-menu list-unstyled">
+                    <li id="sbUsuarios" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnUsers_Click">
+                            <i class="bi bi-people me-2"></i> Usuarios
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbObras" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnObras_Click">
+                            <i class="bi bi-building me-2"></i> Obras
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbPresupuestos" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnPresupuestos_Click">
+                            <i class="bi bi-calculator me-2"></i> Presupuestos
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbMateriales" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnMateriales_Click">
+                            <i class="bi bi-box-seam me-2"></i> Materiales
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbPagos" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnPagos_Click">
+                            <i class="bi bi-cash-coin me-2"></i> Pagos
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbTareas" runat="server">
+                        <asp:LinkButton runat="server" CssClass="sidebar-link" OnClick="lbtnTareas_Click">
+                            <i class="bi bi-list-check me-2"></i> Tareas y Etapas
+                        </asp:LinkButton>
+                    </li>
+                    <li id="sbDocumentos" runat="server">
+                        <asp:LinkButton id="lbtnDocs" runat="server" CssClass="sidebar-link" OnClick="lbtnDocs_Click" >
+                         <i class="bi bi-people me-2"></i> Documentos
+                        </asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+
+
+        <main id="appMain" runat="server" class="app-main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <asp:ContentPlaceHolder ID="ScriptsContent" runat="server" />
+
+
+
+    </form>
+</body>
+</html>
