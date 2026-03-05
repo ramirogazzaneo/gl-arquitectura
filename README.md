@@ -230,6 +230,7 @@ Web.config
 
 
 ![Dashboard](docs/images/admin/dashboard-mainsite.png)
+![Dashboard](docs/images/admin/dashboard-mainsite2.png)
 
 
 
